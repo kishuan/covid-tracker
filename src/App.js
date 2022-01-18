@@ -20,7 +20,6 @@ import Carousel from "react-bootstrap/Carousel";
 import { GraphUpArrow } from "react-bootstrap-icons";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 let tracker = {
