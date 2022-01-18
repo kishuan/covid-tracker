@@ -292,7 +292,10 @@ function Statistics() {
     fetch("https://api.covid19tracker.ca/summary",
     {
       method: 'GET',
-      mode: 'cors'
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      }
     })
       .then((res) => res.json())
       .then(fetchData)
@@ -408,7 +411,10 @@ function StatisticsByProvince() {
     fetch("https://api.covid19tracker.ca/summary/split",
     {
       method: 'GET',
-      mode: 'cors'
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      }
     }
     )
       .then((res) => res.json())
