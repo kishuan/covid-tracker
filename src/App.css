@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .App-logo {
@@ -35,4 +36,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.table {
+  font-size: 1.3em;
+}
+
+.navbar {
+  background-color: rgb(182, 9, 9);
+  color: #f8f3fc;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.footer {
+
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }

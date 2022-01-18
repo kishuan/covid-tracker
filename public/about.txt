@@ -1,0 +1,2 @@
+This site's purpose is to gather relevant links and data pertaining to COVID-19 in a concise and easily accessible way. 
+It gathers various publically available APIs together as a resource for personal use. 
