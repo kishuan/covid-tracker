@@ -289,10 +289,7 @@ function Resources() {
 function Statistics() {
   const [data, fetchData] = useState(null);
   useEffect(() => {
-    fetch("https://api.covid19tracker.ca/summary", {
-      headers: { "Content-Type": "application/json" },
-      mode: "cors",
-    })
+    fetch("https://api.covid19tracker.ca/summary")
       .then((res) => res.json())
       .then(fetchData)
       .catch((err) => {
@@ -404,9 +401,7 @@ function StatisticsByProvince() {
   const [dataByProvince, fetchDataByProvince] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.covid19tracker.ca/summary/split", {
-      mode: "cors",
-    })
+    fetch("https://api.covid19tracker.ca/summary/split")
       .then((res) => res.json())
       .then(fetchDataByProvince)
       .catch((err) => {
