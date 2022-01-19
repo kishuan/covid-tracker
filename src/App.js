@@ -22,7 +22,6 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-
 let tracker = {
   name: "COVID-19 TRACKER CANADA",
   country: "Canada",
@@ -290,9 +289,9 @@ function Resources() {
 function Statistics() {
   const [data, fetchData] = useState(null);
   useEffect(() => {
-    fetch("https://api.covid19tracker.ca/summary",
-    {
-      mode: 'cors',
+    fetch("https://api.covid19tracker.ca/summary", {
+      headers: { "Content-Type": "application/json" },
+      mode: "cors",
     })
       .then((res) => res.json())
       .then(fetchData)
@@ -405,11 +404,10 @@ function StatisticsByProvince() {
   const [dataByProvince, fetchDataByProvince] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.covid19tracker.ca/summary/split",
-    {
-      mode: 'cors',
-    }
-    )
+    fetch("https://api.covid19tracker.ca/summary/split", {
+      headers: { "Content-Type": "application/json" },
+      mode: "cors",
+    })
       .then((res) => res.json())
       .then(fetchDataByProvince)
       .catch((err) => {
