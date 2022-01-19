@@ -407,11 +407,7 @@ function StatisticsByProvince() {
   useEffect(() => {
     fetch("https://api.covid19tracker.ca/summary/split",
     {
-      method: 'GET',
       mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json'
-      }
     }
     )
       .then((res) => res.json())
