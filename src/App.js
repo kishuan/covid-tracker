@@ -21,6 +21,8 @@ import { GraphUpArrow } from "react-bootstrap-icons";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
+import axios from "axios";
+import AccordionCollapse from "react-bootstrap/esm/AccordionCollapse";
 
 let tracker = {
   name: "COVID-19 TRACKER CANADA",
@@ -32,7 +34,7 @@ function Pages() {
     <Tabs defaultActiveKey="daily_statistics" id="tab" className="mb-3">
       <Tab eventKey="daily_statistics" title="Daily Statistics">
         <Statistics />
-        <StatisticsByProvince />
+        {/* <StatisticsByProvince /> */}
       </Tab>
       <Tab eventKey="mental_health_dashboard" title="Mental Health Dashboard">
         <Dashboard />
@@ -285,13 +287,13 @@ function Resources() {
     </Tab.Container>
   );
 }
-
+// function deezNuts(){
+//   return axios.get("https://api.covid19tracker.ca/summary").then(data => console.log(data));
+// }
 function Statistics() {
-  
   const [data, fetchData] = useState(null);
   useEffect(() => {
-    fetch("https://api.covid19tracker.ca/summary")
-      .then((res) => res.json())
+    axios.get("https://api.covid19tracker.ca/summary")
       .then(fetchData)
       .catch((err) => {
         console.error(err);
@@ -301,7 +303,8 @@ function Statistics() {
   if (data) {
     return (
       <>
-        <Container>
+        <div>{data.data.last_updated}</div>
+        {/* <Container>
           <Alert variant="success">
             <Alert.Heading>
               Last updated: {data.last_updated} (CST)
@@ -389,7 +392,7 @@ function Statistics() {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-        </Container>
+        </Container> */}
       </>
     );
   } else {
