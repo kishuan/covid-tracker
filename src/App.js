@@ -21,7 +21,6 @@ import { GraphUpArrow } from "react-bootstrap-icons";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import axios from "axios";
 
 let tracker = {
   name: "COVID-19 TRACKER CANADA",
@@ -290,19 +289,14 @@ function Resources() {
 function Statistics() {
   
   const [data, fetchData] = useState(null);
-
-  axios.get("https://api.covid19tracker.ca/summary")
-      .then((res) => {
-        const resData = res.json(); 
-        fetchData(resData);
-      }
-      )
+  useEffect(() => {
+    fetch("https://api.covid19tracker.ca/summary")
+      .then((res) => res.json())
+      .then(fetchData)
       .catch((err) => {
         console.error(err);
       });
-  useEffect(() => { fetchData()}, []);
-
-
+  }, []);
 
   if (data) {
     return (
