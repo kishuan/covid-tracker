@@ -34,7 +34,7 @@ function Pages() {
     <Tabs defaultActiveKey="daily_statistics" id="tab" className="mb-3">
       <Tab eventKey="daily_statistics" title="Daily Statistics">
         <Statistics />
-        {/* <StatisticsByProvince /> */}
+        <StatisticsByProvince />
       </Tab>
       <Tab eventKey="mental_health_dashboard" title="Mental Health Dashboard">
         <Dashboard />
