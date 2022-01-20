@@ -21,8 +21,7 @@ import { GraphUpArrow } from "react-bootstrap-icons";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import axios from "axios";
-import AccordionCollapse from "react-bootstrap/esm/AccordionCollapse";
+//import AccordionCollapse from "react-bootstrap/esm/AccordionCollapse";
 
 let tracker = {
   name: "COVID-19 TRACKER CANADA",
