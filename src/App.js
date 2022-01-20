@@ -7,7 +7,7 @@ import Table from "react-bootstrap/Table";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Accordion from "react-bootstrap/Accordion";
-import Alert from "react-bootstrap/Alert";
+// import Alert from "react-bootstrap/Alert";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -22,7 +22,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import axios from "axios";
-import AccordionCollapse from "react-bootstrap/esm/AccordionCollapse";
+// import AccordionCollapse from "react-bootstrap/esm/AccordionCollapse";
 
 let tracker = {
   name: "COVID-19 TRACKER CANADA",
