@@ -6,12 +6,13 @@
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
-  # from = "/api/*  https://api.covid19tracker.ca/summary:splat  200
   [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+  [[redirects]]
+  /api/*  https://api.covid19tracker.ca/summary:splat  200
 
 
   [[headers]]
