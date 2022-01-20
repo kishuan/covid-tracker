@@ -12,8 +12,11 @@
   ##status = 200
 
   [[redirects]]
-  /api/*  https://api.covid19tracker.ca/summary:splat  200
 
+  from = "/api/*"  
+  to = "https://api.covid19tracker.ca/summary:splat"
+  status = 200
+  force = true
 
   [[headers]]
   # Define which paths this specific [[headers]] block will cover.
