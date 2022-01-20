@@ -7,8 +7,8 @@
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   [[redirects]]
-  # from = "/*"
-  from = "/api/*  https://api.covid19tracker.ca/summary:splat  200
+  from = "/*"
+  # from = "/api/*  https://api.covid19tracker.ca/summary:splat  200
   to = "/index.html"
   status = 200
 
