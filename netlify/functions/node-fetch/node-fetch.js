@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 const handler = async function () {
   try {
-    const response = await fetch('/.netlify/functions/node-fetch', {
+    const response = await fetch('https://api.covid19tracker.ca/summary', {
       headers: { Accept: 'application/json' },
     })
     if (!response.ok) {
@@ -25,7 +25,5 @@ const handler = async function () {
     }
   }
 }
-
-
 
 module.exports = { handler }
